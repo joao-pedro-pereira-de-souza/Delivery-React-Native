@@ -7,12 +7,83 @@ export const styles = StyleSheet.create({
         flex:1
     },
 
+    //#region ContainerTop
+    containerTop:{
+
+        padding:16,
+        marginTop:30
+
+    },
+    containerTopLogo:{
+
+        width:130,
+        height:50,
+        display:"flex",
+
+        alignItems:"center",
+        justifyContent:"center",
+
+        borderTopLeftRadius:20,
+        borderBottomRightRadius:20,
+        backgroundColor:'#32ff7e'
+
+    },
+    ToptitleLogo:{
+        color:'#fff',
+        fontWeight:"bold",
+        fontSize:20,
+
+
+    },
+    titleTop:{
+
+        color:'#fff',
+        fontWeight:"bold",
+        fontSize:22,
+        marginVertical:7,
+
+    },
+    separationTitleTop:{
+        width:80,
+        height:6,
+        backgroundColor:'#fff',
+        borderRadius:3
+
+    },
+    containerDescriptionTop:{
+
+        width:260,
+        marginVertical:10,
+
+    },
+    descriptionTop:{
+
+        color:'#fff',
+        fontSize:13,
+
+    },
+
+    Button:{
+        width:120,
+        height:40,
+        marginVertical:10,
+        backgroundColor:'#fff',
+        display:"flex",
+
+        alignItems:"center",
+        justifyContent:"center",
+
+        borderRadius:20,
+
+    },
+//#endregion
+
     containerBottom:{
 
         position:"absolute",
         bottom:0,
         width:'100%',
-        height: '63%',
+        height: '58%',
         backgroundColor:'#fff',
         borderTopLeftRadius:20,
         borderTopRightRadius:20,
@@ -21,7 +92,6 @@ export const styles = StyleSheet.create({
 
     containerSlideItem:{
 
-        marginVertical:10,
         alignSelf:"center",
         height:230,
         width:180,
@@ -47,16 +117,28 @@ export const styles = StyleSheet.create({
 
     },
     containerIfonsSlide:{
+
         flex:1,
         backgroundColor: colors.grey
     },
 
     containerSlideInfosText:{
+
         marginTop:10,
         marginLeft:10,
         width:140,
     }, 
 
+    containerButtonMore:{
 
+        alignSelf:"center",
+        alignItems:"center",
+        marginTop:10
+
+    },
+
+    containerDrinks:{
+        marginVertical:30
+    }
 
 })

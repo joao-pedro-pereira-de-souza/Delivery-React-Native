@@ -9,6 +9,7 @@ import img07 from '../image/beer.jpg';
 import img08 from '../image/soda.jpg';
 import img09 from '../image/whisky.jpg';
 import img10 from '../image/wine.jpg';
+
 import imgErro from '../image/image-gallery.png'
 
 export const database = [
@@ -48,5 +49,50 @@ export const database = [
         title:'Pizza em pedaço',
         description: 'uma boa pizza para comer sozinho',
         value: 'R$ 10,00'
+    },
+]
+
+export const databaseUser = [
+
+  {
+      id:0,
+      name:'João Pedro Pereira',
+      email:'jppereiradesouza29@gmail.com',
+      senha: 'joao123',
+      
+  }
+]
+
+
+export const Drinks = [
+    {
+        id:0,
+        img: img06,
+        title:'Sucos',
+        value: 'R$ 8,00'
+    },
+    {
+        id:1,
+        img: img07,
+        title:'Cervejas',
+        value: 'R$ 4,00',
+    },
+    {
+        id:2,
+        img: img08,
+        title:'Refrigerantes',
+        value: 'R$ 5,00'
+    },
+    {
+        id:3,
+        img: img09,
+        title:'Wiscky',
+        value: 'R$ 130,00'
+    },
+    {
+        id:4,
+        img: img10,
+        title:'vinho',
+        value: 'R$ 140,00'
     },
 ]
