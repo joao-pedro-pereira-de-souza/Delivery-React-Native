@@ -16,7 +16,7 @@ export const sizeFonts ={
 
     title: ScreenHeight * 0.04,
     label: ScreenHeight * 0.023,
-    labelDesc: ScreenHeight * 0.01,
+    labelDesc: ScreenHeight * 0.016,
     
 }
 
@@ -36,6 +36,11 @@ title:{
 },
 label:{
     fontSize:sizeFonts.label
+},
+labelDesc:{
+
+    fontSize:sizeFonts.labelDesc
+
 }
 
 })

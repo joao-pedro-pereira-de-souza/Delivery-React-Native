@@ -10,7 +10,7 @@ const drawer = () => {
   const Drawer = createDrawerNavigator();
   return(
 
-    <Drawer.Navigator drawerContent={ props => <DrawerComponent {...props} />} initialRouteName='Cart'>
+    <Drawer.Navigator drawerContent={ props => <DrawerComponent {...props} />} >
       <Drawer.Screen name='Home' component={ScreenHome}/>
       <Drawer.Screen name='Cart' component={ScreenCart}/>
     </Drawer.Navigator>
