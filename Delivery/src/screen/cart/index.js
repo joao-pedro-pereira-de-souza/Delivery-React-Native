@@ -16,8 +16,6 @@ const [ref , setRef] = useState(false)
 
   }
 
-
-
   const rederItens = ({item , index}) => {
 
     return(

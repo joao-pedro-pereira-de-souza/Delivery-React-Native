@@ -56,7 +56,7 @@ export const databaseUser = [
 
   {
       id:0,
-      name:'João Pedro Pereira',
+      name:'jp',
       email:'jppereiradesouza29@gmail.com',
       senha: 'joao123',
       

@@ -1,17 +1,28 @@
 
 import {databaseUser} from './api'
 
-export function SignIn(name , senha){
+export default {
 
-  if(databaseUser.indexOf(name) > -1){
+  SignIn: (name , senha) =>{
 
-      if(databaseUser.indexOf(senha) > -1){
+    let validation = false;
 
-         return true
+    databaseUser.forEach(e =>{
 
-      }
+      if(e.name == name){
 
-      break;
+          if(e.senha == senha){
+
+            validation = true;
+          
+          }
+      
+        }
+
+    })
+    return validation
+
+
   }
 
 }

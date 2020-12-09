@@ -11,7 +11,15 @@ export default function textInput(props) {
 
       <props.Icon name={props.name} size={25} color={props.iconColor || colors.grey}/>
 
-      <TextInput style={styles.Input} placeholder={ props.place } placeholderTextColor={props.placeColor} />
+      <TextInput 
+      style={styles.Input} 
+      placeholder={ props.place } 
+      placeholderTextColor={props.placeColor} 
+      value={props.value}
+      onChangeText={props.changeText}
+      secureTextEntry={props.securePassword}
+      
+      />
 
    </View>
 

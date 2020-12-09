@@ -14,7 +14,7 @@ export default function navigation() {
 
    <NavigationContainer >
 
-       <Stack.Navigator headerMode={false}>
+       <Stack.Navigator headerMode={false} initialRouteName='screensDrawe'>
 
         <Stack.Screen name='signIn' component={ScreenSignIn} />
         <Stack.Screen name='signUp' component={ScreenSignUp} />
