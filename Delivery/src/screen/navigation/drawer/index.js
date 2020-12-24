@@ -5,7 +5,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 
 import ScreenHome from '../../home/index'
 import ScreenCart from '../../cart/index'
-import ScreenProducts from '../tab/index'
 
 import ScreenPizza from '../../screenProducts/pizza/index'
 import ScreenDrinks from '../../screenProducts/drinks/index'

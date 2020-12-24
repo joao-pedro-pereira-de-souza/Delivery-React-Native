@@ -3,14 +3,15 @@ import { View , Image , Text , TouchableOpacity} from 'react-native';
 
 import {styles} from './styles';
 import { stylesFill , colors } from '../../styles';
+
 import Input from '../../component/textInput/index';
 import { FontAwesome5 , Entypo} from '@expo/vector-icons';
-import Requisitions from '../../services/requisitions'
+import Requisitions from '../../services/requisitions';
+
 export default function signIn(props) {
 
   const [nameUser , setNameUser] = useState('');
   const [password , setPassword] = useState('');
-
 
   const SignIn = () =>{
     
@@ -22,9 +23,7 @@ export default function signIn(props) {
 
       alert('Erro')
 
-     }
-
-    
+     } 
   }
 
  return (
@@ -50,7 +49,7 @@ export default function signIn(props) {
 
        Icon={FontAwesome5} 
        name='user-alt' 
-       bg='#FAFAFA' 
+       bg= {colors.grayLight}
        place='Email ou nome' 
        placeColor={colors.green} 
        iconColor={colors.green}
@@ -63,7 +62,7 @@ export default function signIn(props) {
 
        Icon={Entypo} 
        name='lock' 
-       bg='#FAFAFA' 
+       bg={colors.grayLight}
        place='senha' 
        placeColor={colors.green} 
        iconColor={colors.green}
@@ -73,7 +72,7 @@ export default function signIn(props) {
        
        />
 
-      <TouchableOpacity style={[styles.Button, {backgroundColor: colors.green}]} /*onPress={() => props.navigation.navigate('screensDrawe')}*/ onPress={SignIn}>
+      <TouchableOpacity style={[styles.Button, {backgroundColor: colors.green}]} onPress={SignIn}>
         <Text style={[styles.titleButton , {color:'#fff'} ]}>logar</Text>
       </TouchableOpacity>
 

@@ -2,12 +2,11 @@ import React,{ useState} from 'react';
 import { View , Text , TouchableOpacity , ScrollView} from 'react-native';
 import {styles} from './styles'
 
-import { FontAwesome5 , Entypo} from '@expo/vector-icons';
+import { Entypo} from '@expo/vector-icons';
 
 import {colors , stylesFill} from '../../../styles';
 
 import Header from '../../../component/headerSearch/index';
-import ButtonsOp from '../../../component/buttonCardOp/index';
 import {useNavigation} from '@react-navigation/native'
 import Tab from '../../../component/bottomTab/index'
 

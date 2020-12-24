@@ -6,6 +6,7 @@ import ScreenSignIn from '../signIn/index';
 import ScreenSignUp from '../signUp/index';
 import ScreensDrawer from './drawer/index';
 
+import ScreenTutorial from '../tutorial/index';
 export default function navigation() {
 
     const Stack = createStackNavigator();
@@ -14,11 +15,13 @@ export default function navigation() {
 
    <NavigationContainer >
 
-       <Stack.Navigator headerMode={false} initialRouteName='screensDrawe'>
+       <Stack.Navigator headerMode={false} initialRouteName='tutorial'>
 
         <Stack.Screen name='signIn' component={ScreenSignIn} />
         <Stack.Screen name='signUp' component={ScreenSignUp} />
         <Stack.Screen name='screensDrawe' component={ScreensDrawer}/>
+        <Stack.Screen name='tutorial' component={ScreenTutorial}/>
+       
         
        </Stack.Navigator> 
 

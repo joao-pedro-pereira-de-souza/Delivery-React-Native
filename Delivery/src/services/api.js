@@ -12,6 +12,10 @@ import img10 from '../image/wine.jpg';
 
 import imgErro from '../image/image-gallery.png'
 
+import ilus01 from '../image/ilustationCartUser.png'
+import ilus02 from '../image/ilustrationCard.png'
+import ilus03 from '../image/ilustrationCardMoney.png'
+
 export const database = [
 
     {
@@ -95,4 +99,27 @@ export const Drinks = [
         title:'vinho',
         value: 'R$ 140,00'
     },
+]
+
+export const tutorialSilde = [
+    {
+        img: ilus01,
+        title:'Combo carrinho',
+        text: 'Quis laborum est est veniam ex velit non. Dolore velit laboris velit magna ex ut nostrud esse eiusmod aute voluptate.'
+    },
+
+    {
+        img: ilus02,
+        title:'Combo carrinho',
+        text: 'Quis laborum est est veniam ex velit non. Dolore velit laboris velit magna ex ut nostrud esse eiusmod aute voluptate.'
+    },
+
+    {
+        img: ilus03,
+        title:' cupons de desconto.',
+        text: 'Quis laborum est est veniam ex velit non. Dolore velit laboris velit magna ex ut nostrud esse eiusmod aute voluptate.'
+    },
+
+
+
 ]

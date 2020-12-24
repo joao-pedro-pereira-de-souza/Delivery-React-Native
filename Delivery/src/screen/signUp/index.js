@@ -42,7 +42,7 @@ export default function signUp(props) {
         <Input 
           Icon={Entypo} 
           name='lock' 
-          bg='#FAFAFA' 
+          bg= {colors.grayLight} 
           place='senha' 
           placeColor={colors.green} 
           iconColor={colors.green}/>
@@ -51,7 +51,7 @@ export default function signUp(props) {
         <Input 
           Icon={FontAwesome} 
           name='id-card' 
-          bg='#FAFAFA' 
+          bg={colors.grayLight}
           place='CPF' 
           placeColor={colors.green} 
           iconColor={colors.green}/>
