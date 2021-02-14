@@ -1,8 +1,8 @@
-import React,{useRef} from 'react';
+import React,{useRef , useState} from 'react';
 import { View , ImageBackground , Text , Image , TouchableOpacity , ScrollView} from 'react-native';
 import {styles} from './styles';
 import {stylesFill , ScreenWidth , colors} from '../../styles';
-import { Feather } from '@expo/vector-icons';
+import ComponentSwiper from '../../component/Swiper/index'
 import Carousel from 'react-native-snap-carousel';
 import {database , Drinks} from '../../services/api'
 
@@ -10,6 +10,46 @@ export default function home() {
 
   const PizzaRef = useRef(null);
   const DrinkRef = useRef(null);
+
+  const options = [
+
+    {
+      status:'Todos'
+    },
+    {
+      status:'Pizzas'
+    },
+    {
+      status:'bebidas'
+    },
+    {
+      status:'Sobrimesas'
+    },
+    {
+      status:'marmitas'
+    },
+    
+  ]
+
+  const RederSlide = (item , i) =>{
+
+    return(
+
+       <View style={{width:100 , height:40 , backgroundColor:'#000'}}>
+
+       </View>
+
+    )
+
+}
+
+  const [status , setStatus] = useState('Todos')
+
+  const setStausFilter = (status) =>{
+    
+    setStatus(status)
+
+  }
 
   const rederPizza = ({item , index}) => {
 
@@ -58,7 +98,6 @@ export default function home() {
  return (
    <ImageBackground style={styles.container} source={require('../../image/bgHome.jpg')} blurRadius={2}>
 
-
      <View style={styles.containerTop}>
 
       <View style={styles.containerTopLogo}>
@@ -87,7 +126,34 @@ export default function home() {
 
       <ScrollView style={styles.containerBottom} showsVerticalScrollIndicator={false}>
 
-      <Text style={[stylesFill.title , {marginTop: 28 , marginBottom:10, marginLeft:10, color: colors.green }]}>Pizza</Text>
+        <View style={{width:'90%' , alignSelf:'center' , height:140 , marginTop:20 , marginBottom:10}}>
+
+           <ComponentSwiper/>
+
+        </View>
+    
+        <ScrollView horizontal style={{marginHorizontal:20 , marginVertical:10}} showsHorizontalScrollIndicator={false}>
+
+        {options.map((e , i) =>{
+
+              return(
+
+                <TouchableOpacity 
+
+                onPress={() =>setStausFilter(e.status)} 
+                style={ [styles.btnOptions , status=== e.status && {backgroundColor:colors.green , borderWidth:0}]}>
+
+                  <Text style={[status === e.status && {color:'#fff'}]}>{e.status}</Text>
+                  
+                </TouchableOpacity>
+
+              )
+
+        })}
+
+        </ScrollView>
+      
+      <Text style={[stylesFill.title , {marginTop: 15 , marginBottom:10, marginLeft:10, color:colors.grey , opacity:0.7 }]}>Pizza</Text>
 
       <Carousel 
      
@@ -102,27 +168,23 @@ export default function home() {
 
       />
 
-      <TouchableOpacity style={styles.containerButtonMore}>
-
-          <Text style={[stylesFill.label , { color: colors.grey} ]}>Ver Mais </Text>
-
-          <Feather name="chevrons-down" size={35} color="#32ff7e" />
-
-      </TouchableOpacity>
+     
 
       <View style={styles.containerDrinks}>
 
-      <Carousel 
-      ref={DrinkRef}
-      data={Drinks}
-      renderItem={rederPizza}
-      sliderWidth={ScreenWidth}
-      itemWidth={180}
-      keyExtractor={(item) => String(item.id)}
-      inactiveSlideOpacity={1}
-      firstItem={1}
+        <Text>Bebidas</Text>
 
-      />
+        <Carousel 
+        ref={DrinkRef}
+        data={Drinks}
+        renderItem={rederPizza}
+        sliderWidth={ScreenWidth}
+        itemWidth={180}
+        keyExtractor={(item) => String(item.id)}
+        inactiveSlideOpacity={1}
+        firstItem={1}
+
+        />
 
       </View>
 

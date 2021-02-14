@@ -6,8 +6,7 @@ import AppIntrpSlide from 'react-native-app-intro-slider'
 import {tutorialSilde} from '../../services/api'
 import { colors , stylesFill} from '../../styles';
 
-const tutorial = () => {
-
+const tutorial = (props) => {
 
     const Reder = ({item}) =>{
 
@@ -42,7 +41,7 @@ const tutorial = () => {
     }
     const RederButtonDone = () =>{
         return(
-            <TouchableOpacity style ={styles.ButtonNext}>
+            <TouchableOpacity style ={styles.ButtonNext} onPress={() =>props.navigation.navigate('signIn')}>
 
                 <Text>Done</Text>
 
@@ -66,8 +65,7 @@ const tutorial = () => {
                     renderDoneButton={RederButtonDone}
 
                     />
-
-
+                    
             </View>
             
         </View>

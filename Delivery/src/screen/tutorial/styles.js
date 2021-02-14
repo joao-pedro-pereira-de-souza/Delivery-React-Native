@@ -35,7 +35,6 @@ export const styles = StyleSheet.create({
         width:'100%',
         marginTop:8,
         marginLeft:5,
-        text
         
     }, 
     ButtonNext:{

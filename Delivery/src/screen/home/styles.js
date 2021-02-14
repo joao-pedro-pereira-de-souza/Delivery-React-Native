@@ -90,6 +90,17 @@ export const styles = StyleSheet.create({
 
     },
 
+    btnOptions:{
+
+        paddingHorizontal:15,
+        paddingVertical:10,
+        borderRadius:20,
+        borderWidth:1,
+        borderColor:colors.grey,
+        marginRight:5
+
+    },
+
     containerSlideItem:{
 
         alignSelf:"center",
@@ -139,6 +150,7 @@ export const styles = StyleSheet.create({
 
     containerDrinks:{
         marginVertical:30
-    }
+    },
+
 
 })
