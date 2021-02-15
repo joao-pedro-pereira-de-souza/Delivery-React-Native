@@ -124,39 +124,41 @@ export default function home() {
 
       </View>
 
-      <ScrollView style={styles.containerBottom} showsVerticalScrollIndicator={false}>
+    <View style={styles.containerBottom}>
 
-        <View style={{width:'90%' , alignSelf:'center' , height:140 , marginTop:20 , marginBottom:10}}>
+    <ScrollView style={{marginTop:22}} showsVerticalScrollIndicator={false}>
 
-           <ComponentSwiper/>
+      <View style={{width:'90%' , alignSelf:'center' , height:140 , marginBottom:10}}>
 
-        </View>
-    
-        <ScrollView horizontal style={{marginHorizontal:20 , marginVertical:10}} showsHorizontalScrollIndicator={false}>
+        <ComponentSwiper/>
 
-        {options.map((e , i) =>{
+      </View>
 
-              return(
+      <ScrollView horizontal style={{marginHorizontal:20 , marginVertical:10}} showsHorizontalScrollIndicator={false}>
 
-                <TouchableOpacity 
+      {options.map((e , i) =>{
 
-                onPress={() =>setStausFilter(e.status)} 
-                style={ [styles.btnOptions , status=== e.status && {backgroundColor:colors.green , borderWidth:0}]}>
+            return(
 
-                  <Text style={[status === e.status && {color:'#fff'}]}>{e.status}</Text>
-                  
-                </TouchableOpacity>
+              <TouchableOpacity 
 
-              )
+              onPress={() =>setStausFilter(e.status)} 
+              style={ [styles.btnOptions , status=== e.status && {backgroundColor:colors.green , borderWidth:0}]}>
 
-        })}
+                <Text style={[ {color: colors.grey} , status === e.status && {color:'#fff'}]}>{e.status}</Text>
+                
+              </TouchableOpacity>
 
-        </ScrollView>
-      
-      <Text style={[stylesFill.title , {marginTop: 15 , marginBottom:10, marginLeft:10, color:colors.grey , opacity:0.7 }]}>Pizza</Text>
+            )
+
+      })}
+
+      </ScrollView>
+
+      <Text style={[stylesFill.title , {marginTop: 15 , marginBottom:15, marginLeft:20, color:colors.grey , opacity:0.7 }]}>Pizza</Text>
 
       <Carousel 
-     
+
       ref={PizzaRef}
       data={database}
       renderItem={rederPizza}
@@ -168,27 +170,27 @@ export default function home() {
 
       />
 
-     
-
       <View style={styles.containerDrinks}>
 
-        <Text>Bebidas</Text>
+          <Text style={[stylesFill.title , {marginTop: 15 , marginBottom:15, marginLeft:20, color:colors.grey , opacity:0.7 }]}>Bebidas</Text>
 
-        <Carousel 
-        ref={DrinkRef}
-        data={Drinks}
-        renderItem={rederPizza}
-        sliderWidth={ScreenWidth}
-        itemWidth={180}
-        keyExtractor={(item) => String(item.id)}
-        inactiveSlideOpacity={1}
-        firstItem={1}
+          <Carousel 
+          ref={DrinkRef}
+          data={Drinks}
+          renderItem={rederPizza}
+          sliderWidth={ScreenWidth}
+          itemWidth={180}
+          keyExtractor={(item) => String(item.id)}
+          inactiveSlideOpacity={1}
+          firstItem={1}
 
-        />
+          />
 
       </View>
 
       </ScrollView>
+
+    </View>
 
    </ImageBackground>
   );
